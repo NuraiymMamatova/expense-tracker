@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ourfirstrepository/static/css/main.ce978b62.css",
+    "main.js": "/ourfirstrepository/static/js/main.17438612.js",
+    "index.html": "/ourfirstrepository/index.html",
+    "static/media/calendar-picker-icon.svg": "/ourfirstrepository/static/media/calendar-picker-icon.2d676941bc0200f49056.svg",
+    "main.ce978b62.css.map": "/ourfirstrepository/static/css/main.ce978b62.css.map",
+    "main.17438612.js.map": "/ourfirstrepository/static/js/main.17438612.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce978b62.css",
+    "static/js/main.17438612.js"
+  ]
+}
