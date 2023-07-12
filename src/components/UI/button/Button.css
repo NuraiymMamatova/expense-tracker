@@ -1,0 +1,21 @@
+button {
+  height: 7vh;
+  color: white;
+  border-radius: 10px;
+  background: #4a026b;
+  border: none;
+  padding: 5px 20px 5px 20px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+button:hover {
+  background-color: #600A87;
+}
+
+button:active {
+  background-color: #520B73;
+}

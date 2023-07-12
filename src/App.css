@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3f3f3f;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  padding: 100px 0px;
+}
+
+.newExpenseDiv {
+  background: #ad9be9;
+  padding: 20px;
+  width: 70%;
+  justify-content: center;
+  display: flex;
+  border-radius: 12px;
+  align-self: center;
+}
+
+form {
+  display: flex;
+  width: 73%;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+form > div {
+  width: 99%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}

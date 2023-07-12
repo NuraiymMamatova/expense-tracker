@@ -1,0 +1,7 @@
+.expenses {
+  border-radius: 12px;
+  background: #1f1f1f;
+  width: 70%;
+  display: grid;
+  align-self: center;
+}
