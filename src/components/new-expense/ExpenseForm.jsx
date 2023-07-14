@@ -54,7 +54,7 @@ const ExpenseForm = ({ onCloseForm, onAddNewExpense }) => {
     }
 
     const expense = {
-      date,
+      date: new Date(date),
       title,
       amount,
     };
@@ -64,6 +64,7 @@ const ExpenseForm = ({ onCloseForm, onAddNewExpense }) => {
     setTitle("");
     setAmount(0);
     setDate("");
+    onCloseForm();
   };
 
   return (

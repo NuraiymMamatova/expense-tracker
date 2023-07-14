@@ -6,7 +6,7 @@ const ExpenseList = ({ expenses = [] }) => {
   return (
     <ul>
       {expenses.map((expense) => {
-        return <ExpenseItem {...expense} />;
+        return <ExpenseItem key={expense.id} {...expense} />;
       })}
     </ul>
   );
