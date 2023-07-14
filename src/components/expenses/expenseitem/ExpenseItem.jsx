@@ -7,7 +7,6 @@ const ExpenseItem = ({ date, title, amount }) => {
   }
 
   let newDate = new Date(date);
-  console.log(newDate);
 
   return (
     <li>
