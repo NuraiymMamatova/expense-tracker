@@ -7,13 +7,24 @@ const ExpesnsesFilter = ({
   onSelectedYearChange,
   setSelectedSort,
 }) => {
+  const [
+    isEscButtonShowAndHideDescButton,
+    setIsEscButtonShowAndHideDescButton,
+  ] = useState(false);
   const onClickGetValueFromButton = (event) => {
+    const buttonValue = event.target.value;
     console.log(
       "in expense filter onclick get value from button",
-      event.target.value
+      buttonValue
     );
 
-    setSelectedSort(event.target.value);
+    if (buttonValue === "по возрастанию") {
+      setIsEscButtonShowAndHideDescButton(false);
+    } else if (buttonValue === "по убыванию") {
+      setIsEscButtonShowAndHideDescButton(true);
+    }
+
+    setSelectedSort(buttonValue);
   };
   return (
     <div className="expenses-filter">
@@ -21,14 +32,14 @@ const ExpesnsesFilter = ({
         <div className="sorting">
           <Button
             onClick={onClickGetValueFromButton}
-            className="esc"
+            className={isEscButtonShowAndHideDescButton ? "" : "hide-button"}
             value="по возрастанию"
           >
             по возрастанию
           </Button>
           <Button
             onClick={onClickGetValueFromButton}
-            className="desc"
+            className={!isEscButtonShowAndHideDescButton ? "" : "hide-button"}
             value="по убыванию"
           >
             по убыванию

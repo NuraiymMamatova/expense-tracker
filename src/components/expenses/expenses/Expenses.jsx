@@ -31,6 +31,8 @@ const Expenses = ({ expenses = [] }) => {
     renderedExpenses.sort((a, b) => b.date - a.date);
   } else if (selectedSort === "по убыванию") {
     renderedExpenses.sort((a, b) => a.amount - b.amount).reverse();
+  } else if (selectedSort === "по возрастанию") {
+    renderedExpenses.sort((a, b) => a.amount - b.amount);
   }
 
   return (
