@@ -29,6 +29,8 @@ const Expenses = ({ expenses = [] }) => {
     });
   } else if (selectedSort === "по новизне") {
     renderedExpenses.sort((a, b) => b.date - a.date);
+  } else if (selectedSort === "по убыванию") {
+    renderedExpenses.sort((a, b) => a.amount - b.amount).reverse();
   }
 
   return (
