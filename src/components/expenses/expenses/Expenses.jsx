@@ -27,6 +27,8 @@ const Expenses = ({ expenses = [] }) => {
       if (a.title < b.title) return -1;
       return 0;
     });
+  } else if (selectedSort === "по новизне") {
+    renderedExpenses.sort((a, b) => b.date - a.date);
   }
 
   return (
