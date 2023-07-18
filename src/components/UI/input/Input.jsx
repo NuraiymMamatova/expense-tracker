@@ -11,7 +11,7 @@ const StyledInput = styled.input`
   border-radius: 8px;
   border: none;
   outline: none;
-  &[type="date"]::-webkit-calendar-picker-indicator {
+  ::-webkit-calendar-picker-indicator {
     background: url(/src/images/calendar-picker-icon.svg) no-repeat;
   }
 
