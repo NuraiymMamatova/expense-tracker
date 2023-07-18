@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/expense-tracker/static/css/main.94018a20.css",
-    "main.js": "/expense-tracker/static/js/main.677f3752.js",
-    "static/media/calendar-picker-icon.svg": "/expense-tracker/static/media/calendar-picker-icon.2d676941bc0200f49056.svg",
+    "main.css": "/expense-tracker/static/css/main.ffe34ec7.css",
+    "main.js": "/expense-tracker/static/js/main.a3a6ccba.js",
     "index.html": "/expense-tracker/index.html",
-    "main.94018a20.css.map": "/expense-tracker/static/css/main.94018a20.css.map",
-    "main.677f3752.js.map": "/expense-tracker/static/js/main.677f3752.js.map"
+    "main.ffe34ec7.css.map": "/expense-tracker/static/css/main.ffe34ec7.css.map",
+    "main.a3a6ccba.js.map": "/expense-tracker/static/js/main.a3a6ccba.js.map"
   },
   "entrypoints": [
-    "static/css/main.94018a20.css",
-    "static/js/main.677f3752.js"
+    "static/css/main.ffe34ec7.css",
+    "static/js/main.a3a6ccba.js"
   ]
 }
