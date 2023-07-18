@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./ExpensesFilter.css";
 import Button from "../UI/button/Button";
+import { styled } from "styled-components";
 
 const ExpesnsesFilter = ({
   selectedYear,
@@ -13,10 +13,6 @@ const ExpesnsesFilter = ({
   ] = useState(false);
   const onClickGetValueFromButton = (event) => {
     const buttonValue = event.target.value;
-    console.log(
-      "in expense filter onclick get value from button",
-      buttonValue
-    );
 
     if (buttonValue === "по возрастанию") {
       setIsEscButtonShowAndHideDescButton(false);
@@ -27,9 +23,9 @@ const ExpesnsesFilter = ({
     setSelectedSort(buttonValue);
   };
   return (
-    <div className="expenses-filter">
-      <div className="expenses-filter__control">
-        <div className="sorting">
+    <StyledExpenseFilter>
+      <div>
+        <div>
           <Button
             onClick={onClickGetValueFromButton}
             className={isEscButtonShowAndHideDescButton ? "" : "hide-button"}
@@ -51,11 +47,7 @@ const ExpesnsesFilter = ({
             по названию
           </Button>
         </div>
-        <select
-          id="filter"
-          value={selectedYear}
-          onChange={onSelectedYearChange}
-        >
+        <select value={selectedYear} onChange={onSelectedYearChange}>
           <option value="2023">2023</option>
           <option value="2022">2022</option>
           <option value="2021">2021</option>
@@ -63,8 +55,45 @@ const ExpesnsesFilter = ({
           <option value="All">All</option>
         </select>
       </div>
-    </div>
+    </StyledExpenseFilter>
   );
 };
 
 export default ExpesnsesFilter;
+
+const StyledExpenseFilter = styled.div`
+  color: white;
+  padding: 0 1rem;
+  & > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    & > div {
+      display: flex;
+      gap: 10px;
+      & > button {
+        background-color: white;
+        color: #222222;
+        font-weight: 600;
+      }
+    }
+  }
+
+  & label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  & select {
+    font: inherit;
+    padding: 0.5rem 3rem;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+
+  .hide-button {
+    display: none;
+  }
+`;

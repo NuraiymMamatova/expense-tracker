@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ExpenseList from "../expenselist/ExpenseList";
-import "./Expenses.css";
 import ExpesnsesFilter from "../ExpensesFilter";
 import ExpensesChart from "../ExpensesChart";
+import { styled } from "styled-components";
 
 const Expenses = ({ expenses = [] }) => {
   const [selectedYear, setSelectedYear] = useState("All");
@@ -36,7 +36,7 @@ const Expenses = ({ expenses = [] }) => {
   }
 
   return (
-    <div className="expenses">
+    <StyledExpenses>
       <ExpesnsesFilter
         selectedYear={selectedYear}
         onSelectedYearChange={selectedYearChangeHandler}
@@ -45,8 +45,17 @@ const Expenses = ({ expenses = [] }) => {
       />
       <ExpensesChart expenses={renderedExpenses} />
       <ExpenseList expenses={renderedExpenses} />
-    </div>
+    </StyledExpenses>
   );
 };
 
 export default Expenses;
+
+const StyledExpenses = styled.div`
+  border-radius: 12px;
+  background: #1f1f1f;
+  width: 70%;
+  display: grid;
+  align-self: center;
+  padding: 30px;
+`;
