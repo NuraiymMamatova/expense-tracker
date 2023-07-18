@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import NewExpense from "./components/new-expense/NewExpense";
 import Expenses from "./components/expenses/expenses/Expenses";
+import { styled } from "styled-components";
 
 const EXPENSES = [
   {
@@ -40,13 +41,22 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <StyledApp>
       <NewExpense onAddNewExpense={addNewExpenseHandler} />
       <Expenses expenses={expenses} />
-    </div>
+    </StyledApp>
   );
 }
 
 export default App;
+
+const StyledApp = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  padding: 100px 0px;
+  background-color: #3f3f3f;
+`;
 
 // hook это функция  всегда use деген префикс менен башталат эгерде use менен башталган функция болсо ал hook болуп эсептелет

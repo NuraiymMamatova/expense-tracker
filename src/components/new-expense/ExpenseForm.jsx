@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormInput from "../UI/input/FormInput";
 import Button from "../UI/button/Button";
+import { styled } from "styled-components";
 
 const arrayForDisable = new Map();
 const ExpenseForm = ({ onCloseForm, onAddNewExpense }) => {
@@ -68,7 +69,7 @@ const ExpenseForm = ({ onCloseForm, onAddNewExpense }) => {
   };
 
   return (
-    <form>
+    <StyledForm>
       <FormInput
         label={"Заголовок"}
         inputType="text"
@@ -102,8 +103,21 @@ const ExpenseForm = ({ onCloseForm, onAddNewExpense }) => {
           Добавить расходы
         </Button>
       </div>
-    </form>
+    </StyledForm>
   );
 };
 
 export default ExpenseForm;
+
+const StyledForm = styled.form`
+  display: flex;
+  width: 73%;
+  flex-wrap: wrap;
+  gap: 35px;
+  & > div {
+    width: 99%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+`;
